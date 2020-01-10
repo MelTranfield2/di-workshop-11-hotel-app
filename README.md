@@ -58,7 +58,8 @@ class Hotel {
 module.exports = Hotel
 ```
 
-This should be enough to get you started - you should use a similar pattern for your `Review` class.
+This should be enough to get you started - 
+you should use a similar pattern for your `Review` class.
 
 Your classes should implement the following interface:
 
