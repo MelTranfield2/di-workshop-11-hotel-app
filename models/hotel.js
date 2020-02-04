@@ -25,7 +25,17 @@ class Hotel {
     urlSlug() {
         return (this.name.replace(' ', '_') + '_' + this.city.replace(' ', '_')).toLowerCase()
     }
+    toJSON() {
+        return {
+            name:this.name, city:this.city, reviewCount:this.reviewCount(),
+            ratingAsStars:this.ratingAsStars(),
+            urlSlug:this.urlSlug(),
+            reviews:"[" + this.reviews.map(r => r.toJSON()).join('') + "]"
+        }
+    }
 }
+//mp
+//JSON - interface. built in .js function, returns json string of any object you give, needs to know how to convert to json string
 //0 / 0 = NaN. 
 //reduce - is functional programming
 module.exports = Hotel

@@ -11,5 +11,13 @@ class Review {
         }
         return stars
     }
+    toJSON() {
+        return {
+            rating:this.rating,
+            text:this.text,
+            date:this.date.toISOString(),
+            ratingAsStars:this.ratingAsStars()
+        }
+    } //new js object - not instance of a class, value is current rating/value of object
 }
 module.exports = Review //tells .js that this whole file exports the review class
